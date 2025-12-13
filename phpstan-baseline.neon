@@ -1,0 +1,967 @@
+parameters:
+	ignoreErrors:
+		-
+			message: '#^Path in include\(\) "\.\./\.\./\.\./config/config\.php" is not a file or it does not exist\.$#'
+			identifier: include.fileNotFound
+			count: 1
+			path: front/config.php
+
+		-
+			message: '#^Path in include\(\) "\.\./\.\./\.\./inc/config\.php" is not a file or it does not exist\.$#'
+			identifier: include.fileNotFound
+			count: 1
+			path: front/insert_rn.php
+
+		-
+			message: '#^Inner named functions are not supported by PHPStan\. Consider refactoring to an anonymous function, class method, or a top\-level\-defined function\. See issue \#165 \(https\://github\.com/phpstan/phpstan/issues/165\) for more details\.$#'
+			identifier: function.inner
+			count: 1
+			path: hook.php
+
+		-
+			message: '#^Access to static property \$rightname on an unknown class Config\.$#'
+			identifier: class.notFound
+			count: 2
+			path: inc/config.class.php
+
+		-
+			message: '#^Call to an undefined method PluginOsProfile\:\:getTable\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: inc/profile.class.php
+
+		-
+			message: '#^Deprecated in PHP 8\.4\: Parameter \#2 \$data \(string\) is implicitly nullable via default value null\.$#'
+			identifier: parameter.implicitlyNullable
+			count: 1
+			path: inc/qrcode/src/Data/QRDataAbstract.php
+
+		-
+			message: '#^Deprecated in PHP 8\.4\: Parameter \#2 \$test \(bool\) is implicitly nullable via default value null\.$#'
+			identifier: parameter.implicitlyNullable
+			count: 1
+			path: inc/qrcode/src/Data/QRDataAbstract.php
+
+		-
+			message: '#^Deprecated in PHP 8\.4\: Parameter \#2 \$test \(bool\) is implicitly nullable via default value null\.$#'
+			identifier: parameter.implicitlyNullable
+			count: 1
+			path: inc/qrcode/src/Data/QRDataInterface.php
+
+		-
+			message: '#^Deprecated in PHP 8\.4\: Parameter \#1 \$size \(int\) is implicitly nullable via default value null\.$#'
+			identifier: parameter.implicitlyNullable
+			count: 1
+			path: inc/qrcode/src/Data/QRMatrix.php
+
+		-
+			message: '#^Deprecated in PHP 8\.4\: Parameter \#1 \$test \(bool\) is implicitly nullable via default value null\.$#'
+			identifier: parameter.implicitlyNullable
+			count: 1
+			path: inc/qrcode/src/Data/QRMatrix.php
+
+		-
+			message: '#^Deprecated in PHP 8\.4\: Parameter \#2 \$test \(bool\) is implicitly nullable via default value null\.$#'
+			identifier: parameter.implicitlyNullable
+			count: 1
+			path: inc/qrcode/src/Data/QRMatrix.php
+
+		-
+			message: '#^Deprecated in PHP 8\.4\: Parameter \#3 \$startX \(int\) is implicitly nullable via default value null\.$#'
+			identifier: parameter.implicitlyNullable
+			count: 1
+			path: inc/qrcode/src/Data/QRMatrix.php
+
+		-
+			message: '#^Deprecated in PHP 8\.4\: Parameter \#4 \$startY \(int\) is implicitly nullable via default value null\.$#'
+			identifier: parameter.implicitlyNullable
+			count: 1
+			path: inc/qrcode/src/Data/QRMatrix.php
+
+		-
+			message: '#^Deprecated in PHP 8\.4\: Parameter \#1 \$num \(array\) is implicitly nullable via default value null\.$#'
+			identifier: parameter.implicitlyNullable
+			count: 1
+			path: inc/qrcode/src/Helpers/Polynomial.php
+
+		-
+			message: '#^Deprecated in PHP 8\.4\: Parameter \#2 \$shift \(int\) is implicitly nullable via default value null\.$#'
+			identifier: parameter.implicitlyNullable
+			count: 2
+			path: inc/qrcode/src/Helpers/Polynomial.php
+
+		-
+			message: '#^Deprecated in PHP 8\.4\: Parameter \#1 \$file \(string\) is implicitly nullable via default value null\.$#'
+			identifier: parameter.implicitlyNullable
+			count: 1
+			path: inc/qrcode/src/Output/QRFpdf.php
+
+		-
+			message: '#^Deprecated in PHP 8\.4\: Parameter \#1 \$file \(string\) is implicitly nullable via default value null\.$#'
+			identifier: parameter.implicitlyNullable
+			count: 2
+			path: inc/qrcode/src/Output/QRImage.php
+
+		-
+			message: '#^Deprecated in PHP 8\.4\: Parameter \#1 \$file \(string\) is implicitly nullable via default value null\.$#'
+			identifier: parameter.implicitlyNullable
+			count: 1
+			path: inc/qrcode/src/Output/QRImagick.php
+
+		-
+			message: '#^Deprecated in PHP 8\.4\: Parameter \#1 \$file \(string\) is implicitly nullable via default value null\.$#'
+			identifier: parameter.implicitlyNullable
+			count: 1
+			path: inc/qrcode/src/Output/QROutputAbstract.php
+
+		-
+			message: '#^Deprecated in PHP 8\.4\: Parameter \#1 \$file \(string\) is implicitly nullable via default value null\.$#'
+			identifier: parameter.implicitlyNullable
+			count: 1
+			path: inc/qrcode/src/Output/QROutputInterface.php
+
+		-
+			message: '#^Deprecated in PHP 8\.4\: Parameter \#1 \$options \(chillerlan\\Settings\\SettingsContainerInterface\) is implicitly nullable via default value null\.$#'
+			identifier: parameter.implicitlyNullable
+			count: 1
+			path: inc/qrcode/src/QRCode.php
+
+		-
+			message: '#^Deprecated in PHP 8\.4\: Parameter \#2 \$file \(string\) is implicitly nullable via default value null\.$#'
+			identifier: parameter.implicitlyNullable
+			count: 1
+			path: inc/qrcode/src/QRCode.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\Data\\AlphaNumTest\:\:expectException\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: inc/qrcode/tests/Data/AlphaNumTest.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\Data\\AlphaNumTest\:\:expectExceptionMessage\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: inc/qrcode/tests/Data/AlphaNumTest.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\Data\\DatainterfaceTestAbstract\:\:assertInstanceOf\(\)\.$#'
+			identifier: method.notFound
+			count: 2
+			path: inc/qrcode/tests/Data/DatainterfaceTestAbstract.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\Data\\DatainterfaceTestAbstract\:\:assertSame\(\)\.$#'
+			identifier: method.notFound
+			count: 2
+			path: inc/qrcode/tests/Data/DatainterfaceTestAbstract.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\Data\\DatainterfaceTestAbstract\:\:expectException\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: inc/qrcode/tests/Data/DatainterfaceTestAbstract.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\Data\\DatainterfaceTestAbstract\:\:expectExceptionMessage\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: inc/qrcode/tests/Data/DatainterfaceTestAbstract.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\Data\\KanjiTest\:\:expectException\(\)\.$#'
+			identifier: method.notFound
+			count: 2
+			path: inc/qrcode/tests/Data/KanjiTest.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\Data\\KanjiTest\:\:expectExceptionMessage\(\)\.$#'
+			identifier: method.notFound
+			count: 2
+			path: inc/qrcode/tests/Data/KanjiTest.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\Data\\MaskPatternTesterTest\:\:assertSame\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: inc/qrcode/tests/Data/MaskPatternTesterTest.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\Data\\NumberTest\:\:expectException\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: inc/qrcode/tests/Data/NumberTest.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\Data\\NumberTest\:\:expectExceptionMessage\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: inc/qrcode/tests/Data/NumberTest.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\Data\\QRMatrixTest\:\:assertCount\(\)\.$#'
+			identifier: method.notFound
+			count: 3
+			path: inc/qrcode/tests/Data/QRMatrixTest.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\Data\\QRMatrixTest\:\:assertFalse\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: inc/qrcode/tests/Data/QRMatrixTest.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\Data\\QRMatrixTest\:\:assertInstanceOf\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: inc/qrcode/tests/Data/QRMatrixTest.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\Data\\QRMatrixTest\:\:assertSame\(\)\.$#'
+			identifier: method.notFound
+			count: 30
+			path: inc/qrcode/tests/Data/QRMatrixTest.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\Data\\QRMatrixTest\:\:assertTrue\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: inc/qrcode/tests/Data/QRMatrixTest.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\Data\\QRMatrixTest\:\:expectException\(\)\.$#'
+			identifier: method.notFound
+			count: 5
+			path: inc/qrcode/tests/Data/QRMatrixTest.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\Data\\QRMatrixTest\:\:expectExceptionMessage\(\)\.$#'
+			identifier: method.notFound
+			count: 5
+			path: inc/qrcode/tests/Data/QRMatrixTest.php
+
+		-
+			message: '#^Call to an undefined static method chillerlan\\QRCodeTest\\Data\\QRMatrixTest\:\:assertNotSame\(\)\.$#'
+			identifier: staticMethod.notFound
+			count: 4
+			path: inc/qrcode/tests/Data/QRMatrixTest.php
+
+		-
+			message: '#^Call to an undefined static method chillerlan\\QRCodeTest\\Data\\QRMatrixTest\:\:assertSame\(\)\.$#'
+			identifier: staticMethod.notFound
+			count: 11
+			path: inc/qrcode/tests/Data/QRMatrixTest.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\Helpers\\BitBufferTest\:\:assertSame\(\)\.$#'
+			identifier: method.notFound
+			count: 4
+			path: inc/qrcode/tests/Helpers/BitBufferTest.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\Helpers\\PolynomialTest\:\:assertSame\(\)\.$#'
+			identifier: method.notFound
+			count: 3
+			path: inc/qrcode/tests/Helpers/PolynomialTest.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\Helpers\\PolynomialTest\:\:expectException\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: inc/qrcode/tests/Helpers/PolynomialTest.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\Helpers\\PolynomialTest\:\:expectExceptionMessage\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: inc/qrcode/tests/Helpers/PolynomialTest.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\Output\\QRFpdfTest\:\:markTestSkipped\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: inc/qrcode/tests/Output/QRFpdfTest.php
+
+		-
+			message: '#^Call to an undefined static method chillerlan\\QRCodeTest\\Output\\QRFpdfTest\:\:assertInstanceOf\(\)\.$#'
+			identifier: staticMethod.notFound
+			count: 1
+			path: inc/qrcode/tests/Output/QRFpdfTest.php
+
+		-
+			message: '#^Call to an undefined static method chillerlan\\QRCodeTest\\Output\\QRFpdfTest\:\:assertSame\(\)\.$#'
+			identifier: staticMethod.notFound
+			count: 1
+			path: inc/qrcode/tests/Output/QRFpdfTest.php
+
+		-
+			message: '#^Call to an undefined static method chillerlan\\QRCodeTest\\Output\\QRFpdfTest\:\:assertTrue\(\)\.$#'
+			identifier: staticMethod.notFound
+			count: 1
+			path: inc/qrcode/tests/Output/QRFpdfTest.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\Output\\QRImageTest\:\:assertSame\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: inc/qrcode/tests/Output/QRImageTest.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\Output\\QRImageTest\:\:assertTrue\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: inc/qrcode/tests/Output/QRImageTest.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\Output\\QRImageTest\:\:markAsRisky\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: inc/qrcode/tests/Output/QRImageTest.php
+
+		-
+			message: '#^Call to an undefined static method chillerlan\\QRCodeTest\\Output\\QRImageTest\:\:assertIsResource\(\)\.$#'
+			identifier: staticMethod.notFound
+			count: 1
+			path: inc/qrcode/tests/Output/QRImageTest.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\Output\\QRImagickTest\:\:assertSame\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: inc/qrcode/tests/Output/QRImagickTest.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\Output\\QRImagickTest\:\:assertTrue\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: inc/qrcode/tests/Output/QRImagickTest.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\Output\\QRImagickTest\:\:markTestSkipped\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: inc/qrcode/tests/Output/QRImagickTest.php
+
+		-
+			message: '#^Call to an undefined static method chillerlan\\QRCodeTest\\Output\\QRImagickTest\:\:assertInstanceOf\(\)\.$#'
+			identifier: staticMethod.notFound
+			count: 1
+			path: inc/qrcode/tests/Output/QRImagickTest.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\Output\\QRMarkupTest\:\:assertSame\(\)\.$#'
+			identifier: method.notFound
+			count: 2
+			path: inc/qrcode/tests/Output/QRMarkupTest.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\Output\\QRMarkupTest\:\:assertStringContainsString\(\)\.$#'
+			identifier: method.notFound
+			count: 2
+			path: inc/qrcode/tests/Output/QRMarkupTest.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\Output\\QROutputTestAbstract\:\:assertInstanceOf\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: inc/qrcode/tests/Output/QROutputTestAbstract.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\Output\\QROutputTestAbstract\:\:expectException\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: inc/qrcode/tests/Output/QROutputTestAbstract.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\Output\\QROutputTestAbstract\:\:expectExceptionMessage\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: inc/qrcode/tests/Output/QROutputTestAbstract.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\Output\\QRStringTest\:\:assertSame\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: inc/qrcode/tests/Output/QRStringTest.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\Output\\QRStringTest\:\:assertStringContainsString\(\)\.$#'
+			identifier: method.notFound
+			count: 2
+			path: inc/qrcode/tests/Output/QRStringTest.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\QRCodeTest\:\:assertFalse\(\)\.$#'
+			identifier: method.notFound
+			count: 3
+			path: inc/qrcode/tests/QRCodeTest.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\QRCodeTest\:\:assertInstanceOf\(\)\.$#'
+			identifier: method.notFound
+			count: 6
+			path: inc/qrcode/tests/QRCodeTest.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\QRCodeTest\:\:assertNotEquals\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: inc/qrcode/tests/QRCodeTest.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\QRCodeTest\:\:assertSame\(\)\.$#'
+			identifier: method.notFound
+			count: 2
+			path: inc/qrcode/tests/QRCodeTest.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\QRCodeTest\:\:assertStringContainsString\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: inc/qrcode/tests/QRCodeTest.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\QRCodeTest\:\:assertTrue\(\)\.$#'
+			identifier: method.notFound
+			count: 3
+			path: inc/qrcode/tests/QRCodeTest.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\QRCodeTest\:\:expectException\(\)\.$#'
+			identifier: method.notFound
+			count: 3
+			path: inc/qrcode/tests/QRCodeTest.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\QRCodeTest\:\:expectExceptionMessage\(\)\.$#'
+			identifier: method.notFound
+			count: 3
+			path: inc/qrcode/tests/QRCodeTest.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\QROptionsTest\:\:assertSame\(\)\.$#'
+			identifier: method.notFound
+			count: 18
+			path: inc/qrcode/tests/QROptionsTest.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\QROptionsTest\:\:expectException\(\)\.$#'
+			identifier: method.notFound
+			count: 2
+			path: inc/qrcode/tests/QROptionsTest.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\QROptionsTest\:\:expectExceptionMessage\(\)\.$#'
+			identifier: method.notFound
+			count: 2
+			path: inc/qrcode/tests/QROptionsTest.php
+
+		-
+			message: '#^Deprecated in PHP 8\.4\: Parameter \#1 \$file \(string\) is implicitly nullable via default value null\.$#'
+			identifier: parameter.implicitlyNullable
+			count: 1
+			path: inc/qrcode/vendor/chillerlan/php-qrcode/examples/MyCustomOutput.php
+
+		-
+			message: '#^Deprecated in PHP 8\.4\: Parameter \#1 \$file \(string\) is implicitly nullable via default value null\.$#'
+			identifier: parameter.implicitlyNullable
+			count: 1
+			path: inc/qrcode/vendor/chillerlan/php-qrcode/examples/QRImageWithLogo.php
+
+		-
+			message: '#^Deprecated in PHP 8\.4\: Parameter \#2 \$logo \(string\) is implicitly nullable via default value null\.$#'
+			identifier: parameter.implicitlyNullable
+			count: 1
+			path: inc/qrcode/vendor/chillerlan/php-qrcode/examples/QRImageWithLogo.php
+
+		-
+			message: '#^Deprecated in PHP 8\.4\: Parameter \#1 \$file \(string\) is implicitly nullable via default value null\.$#'
+			identifier: parameter.implicitlyNullable
+			count: 1
+			path: inc/qrcode/vendor/chillerlan/php-qrcode/examples/QRImageWithText.php
+
+		-
+			message: '#^Deprecated in PHP 8\.4\: Parameter \#2 \$text \(string\) is implicitly nullable via default value null\.$#'
+			identifier: parameter.implicitlyNullable
+			count: 1
+			path: inc/qrcode/vendor/chillerlan/php-qrcode/examples/QRImageWithText.php
+
+		-
+			message: '#^Deprecated in PHP 8\.4\: Parameter \#2 \$data \(string\) is implicitly nullable via default value null\.$#'
+			identifier: parameter.implicitlyNullable
+			count: 1
+			path: inc/qrcode/vendor/chillerlan/php-qrcode/src/Data/QRDataAbstract.php
+
+		-
+			message: '#^Deprecated in PHP 8\.4\: Parameter \#2 \$test \(bool\) is implicitly nullable via default value null\.$#'
+			identifier: parameter.implicitlyNullable
+			count: 1
+			path: inc/qrcode/vendor/chillerlan/php-qrcode/src/Data/QRDataAbstract.php
+
+		-
+			message: '#^Deprecated in PHP 8\.4\: Parameter \#2 \$test \(bool\) is implicitly nullable via default value null\.$#'
+			identifier: parameter.implicitlyNullable
+			count: 1
+			path: inc/qrcode/vendor/chillerlan/php-qrcode/src/Data/QRDataInterface.php
+
+		-
+			message: '#^Deprecated in PHP 8\.4\: Parameter \#1 \$size \(int\) is implicitly nullable via default value null\.$#'
+			identifier: parameter.implicitlyNullable
+			count: 1
+			path: inc/qrcode/vendor/chillerlan/php-qrcode/src/Data/QRMatrix.php
+
+		-
+			message: '#^Deprecated in PHP 8\.4\: Parameter \#1 \$test \(bool\) is implicitly nullable via default value null\.$#'
+			identifier: parameter.implicitlyNullable
+			count: 1
+			path: inc/qrcode/vendor/chillerlan/php-qrcode/src/Data/QRMatrix.php
+
+		-
+			message: '#^Deprecated in PHP 8\.4\: Parameter \#2 \$test \(bool\) is implicitly nullable via default value null\.$#'
+			identifier: parameter.implicitlyNullable
+			count: 1
+			path: inc/qrcode/vendor/chillerlan/php-qrcode/src/Data/QRMatrix.php
+
+		-
+			message: '#^Deprecated in PHP 8\.4\: Parameter \#3 \$startX \(int\) is implicitly nullable via default value null\.$#'
+			identifier: parameter.implicitlyNullable
+			count: 1
+			path: inc/qrcode/vendor/chillerlan/php-qrcode/src/Data/QRMatrix.php
+
+		-
+			message: '#^Deprecated in PHP 8\.4\: Parameter \#4 \$startY \(int\) is implicitly nullable via default value null\.$#'
+			identifier: parameter.implicitlyNullable
+			count: 1
+			path: inc/qrcode/vendor/chillerlan/php-qrcode/src/Data/QRMatrix.php
+
+		-
+			message: '#^Deprecated in PHP 8\.4\: Parameter \#1 \$num \(array\) is implicitly nullable via default value null\.$#'
+			identifier: parameter.implicitlyNullable
+			count: 1
+			path: inc/qrcode/vendor/chillerlan/php-qrcode/src/Helpers/Polynomial.php
+
+		-
+			message: '#^Deprecated in PHP 8\.4\: Parameter \#2 \$shift \(int\) is implicitly nullable via default value null\.$#'
+			identifier: parameter.implicitlyNullable
+			count: 2
+			path: inc/qrcode/vendor/chillerlan/php-qrcode/src/Helpers/Polynomial.php
+
+		-
+			message: '#^Deprecated in PHP 8\.4\: Parameter \#1 \$file \(string\) is implicitly nullable via default value null\.$#'
+			identifier: parameter.implicitlyNullable
+			count: 1
+			path: inc/qrcode/vendor/chillerlan/php-qrcode/src/Output/QRFpdf.php
+
+		-
+			message: '#^Deprecated in PHP 8\.4\: Parameter \#1 \$file \(string\) is implicitly nullable via default value null\.$#'
+			identifier: parameter.implicitlyNullable
+			count: 2
+			path: inc/qrcode/vendor/chillerlan/php-qrcode/src/Output/QRImage.php
+
+		-
+			message: '#^Deprecated in PHP 8\.4\: Parameter \#1 \$file \(string\) is implicitly nullable via default value null\.$#'
+			identifier: parameter.implicitlyNullable
+			count: 1
+			path: inc/qrcode/vendor/chillerlan/php-qrcode/src/Output/QRImagick.php
+
+		-
+			message: '#^Deprecated in PHP 8\.4\: Parameter \#1 \$file \(string\) is implicitly nullable via default value null\.$#'
+			identifier: parameter.implicitlyNullable
+			count: 1
+			path: inc/qrcode/vendor/chillerlan/php-qrcode/src/Output/QROutputAbstract.php
+
+		-
+			message: '#^Deprecated in PHP 8\.4\: Parameter \#1 \$file \(string\) is implicitly nullable via default value null\.$#'
+			identifier: parameter.implicitlyNullable
+			count: 1
+			path: inc/qrcode/vendor/chillerlan/php-qrcode/src/Output/QROutputInterface.php
+
+		-
+			message: '#^Deprecated in PHP 8\.4\: Parameter \#1 \$options \(chillerlan\\Settings\\SettingsContainerInterface\) is implicitly nullable via default value null\.$#'
+			identifier: parameter.implicitlyNullable
+			count: 1
+			path: inc/qrcode/vendor/chillerlan/php-qrcode/src/QRCode.php
+
+		-
+			message: '#^Deprecated in PHP 8\.4\: Parameter \#2 \$file \(string\) is implicitly nullable via default value null\.$#'
+			identifier: parameter.implicitlyNullable
+			count: 1
+			path: inc/qrcode/vendor/chillerlan/php-qrcode/src/QRCode.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\Data\\AlphaNumTest\:\:expectException\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: inc/qrcode/vendor/chillerlan/php-qrcode/tests/Data/AlphaNumTest.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\Data\\AlphaNumTest\:\:expectExceptionMessage\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: inc/qrcode/vendor/chillerlan/php-qrcode/tests/Data/AlphaNumTest.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\Data\\DatainterfaceTestAbstract\:\:assertInstanceOf\(\)\.$#'
+			identifier: method.notFound
+			count: 2
+			path: inc/qrcode/vendor/chillerlan/php-qrcode/tests/Data/DatainterfaceTestAbstract.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\Data\\DatainterfaceTestAbstract\:\:assertSame\(\)\.$#'
+			identifier: method.notFound
+			count: 2
+			path: inc/qrcode/vendor/chillerlan/php-qrcode/tests/Data/DatainterfaceTestAbstract.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\Data\\DatainterfaceTestAbstract\:\:expectException\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: inc/qrcode/vendor/chillerlan/php-qrcode/tests/Data/DatainterfaceTestAbstract.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\Data\\DatainterfaceTestAbstract\:\:expectExceptionMessage\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: inc/qrcode/vendor/chillerlan/php-qrcode/tests/Data/DatainterfaceTestAbstract.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\Data\\KanjiTest\:\:expectException\(\)\.$#'
+			identifier: method.notFound
+			count: 2
+			path: inc/qrcode/vendor/chillerlan/php-qrcode/tests/Data/KanjiTest.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\Data\\KanjiTest\:\:expectExceptionMessage\(\)\.$#'
+			identifier: method.notFound
+			count: 2
+			path: inc/qrcode/vendor/chillerlan/php-qrcode/tests/Data/KanjiTest.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\Data\\MaskPatternTesterTest\:\:assertSame\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: inc/qrcode/vendor/chillerlan/php-qrcode/tests/Data/MaskPatternTesterTest.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\Data\\NumberTest\:\:expectException\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: inc/qrcode/vendor/chillerlan/php-qrcode/tests/Data/NumberTest.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\Data\\NumberTest\:\:expectExceptionMessage\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: inc/qrcode/vendor/chillerlan/php-qrcode/tests/Data/NumberTest.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\Data\\QRMatrixTest\:\:assertCount\(\)\.$#'
+			identifier: method.notFound
+			count: 3
+			path: inc/qrcode/vendor/chillerlan/php-qrcode/tests/Data/QRMatrixTest.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\Data\\QRMatrixTest\:\:assertFalse\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: inc/qrcode/vendor/chillerlan/php-qrcode/tests/Data/QRMatrixTest.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\Data\\QRMatrixTest\:\:assertInstanceOf\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: inc/qrcode/vendor/chillerlan/php-qrcode/tests/Data/QRMatrixTest.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\Data\\QRMatrixTest\:\:assertSame\(\)\.$#'
+			identifier: method.notFound
+			count: 30
+			path: inc/qrcode/vendor/chillerlan/php-qrcode/tests/Data/QRMatrixTest.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\Data\\QRMatrixTest\:\:assertTrue\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: inc/qrcode/vendor/chillerlan/php-qrcode/tests/Data/QRMatrixTest.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\Data\\QRMatrixTest\:\:expectException\(\)\.$#'
+			identifier: method.notFound
+			count: 5
+			path: inc/qrcode/vendor/chillerlan/php-qrcode/tests/Data/QRMatrixTest.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\Data\\QRMatrixTest\:\:expectExceptionMessage\(\)\.$#'
+			identifier: method.notFound
+			count: 5
+			path: inc/qrcode/vendor/chillerlan/php-qrcode/tests/Data/QRMatrixTest.php
+
+		-
+			message: '#^Call to an undefined static method chillerlan\\QRCodeTest\\Data\\QRMatrixTest\:\:assertNotSame\(\)\.$#'
+			identifier: staticMethod.notFound
+			count: 4
+			path: inc/qrcode/vendor/chillerlan/php-qrcode/tests/Data/QRMatrixTest.php
+
+		-
+			message: '#^Call to an undefined static method chillerlan\\QRCodeTest\\Data\\QRMatrixTest\:\:assertSame\(\)\.$#'
+			identifier: staticMethod.notFound
+			count: 11
+			path: inc/qrcode/vendor/chillerlan/php-qrcode/tests/Data/QRMatrixTest.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\Helpers\\BitBufferTest\:\:assertSame\(\)\.$#'
+			identifier: method.notFound
+			count: 4
+			path: inc/qrcode/vendor/chillerlan/php-qrcode/tests/Helpers/BitBufferTest.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\Helpers\\PolynomialTest\:\:assertSame\(\)\.$#'
+			identifier: method.notFound
+			count: 3
+			path: inc/qrcode/vendor/chillerlan/php-qrcode/tests/Helpers/PolynomialTest.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\Helpers\\PolynomialTest\:\:expectException\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: inc/qrcode/vendor/chillerlan/php-qrcode/tests/Helpers/PolynomialTest.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\Helpers\\PolynomialTest\:\:expectExceptionMessage\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: inc/qrcode/vendor/chillerlan/php-qrcode/tests/Helpers/PolynomialTest.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\Output\\QRFpdfTest\:\:markTestSkipped\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: inc/qrcode/vendor/chillerlan/php-qrcode/tests/Output/QRFpdfTest.php
+
+		-
+			message: '#^Call to an undefined static method chillerlan\\QRCodeTest\\Output\\QRFpdfTest\:\:assertInstanceOf\(\)\.$#'
+			identifier: staticMethod.notFound
+			count: 1
+			path: inc/qrcode/vendor/chillerlan/php-qrcode/tests/Output/QRFpdfTest.php
+
+		-
+			message: '#^Call to an undefined static method chillerlan\\QRCodeTest\\Output\\QRFpdfTest\:\:assertSame\(\)\.$#'
+			identifier: staticMethod.notFound
+			count: 1
+			path: inc/qrcode/vendor/chillerlan/php-qrcode/tests/Output/QRFpdfTest.php
+
+		-
+			message: '#^Call to an undefined static method chillerlan\\QRCodeTest\\Output\\QRFpdfTest\:\:assertTrue\(\)\.$#'
+			identifier: staticMethod.notFound
+			count: 1
+			path: inc/qrcode/vendor/chillerlan/php-qrcode/tests/Output/QRFpdfTest.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\Output\\QRImageTest\:\:assertSame\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: inc/qrcode/vendor/chillerlan/php-qrcode/tests/Output/QRImageTest.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\Output\\QRImageTest\:\:assertTrue\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: inc/qrcode/vendor/chillerlan/php-qrcode/tests/Output/QRImageTest.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\Output\\QRImageTest\:\:markAsRisky\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: inc/qrcode/vendor/chillerlan/php-qrcode/tests/Output/QRImageTest.php
+
+		-
+			message: '#^Call to an undefined static method chillerlan\\QRCodeTest\\Output\\QRImageTest\:\:assertIsResource\(\)\.$#'
+			identifier: staticMethod.notFound
+			count: 1
+			path: inc/qrcode/vendor/chillerlan/php-qrcode/tests/Output/QRImageTest.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\Output\\QRImagickTest\:\:assertSame\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: inc/qrcode/vendor/chillerlan/php-qrcode/tests/Output/QRImagickTest.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\Output\\QRImagickTest\:\:assertTrue\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: inc/qrcode/vendor/chillerlan/php-qrcode/tests/Output/QRImagickTest.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\Output\\QRImagickTest\:\:markTestSkipped\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: inc/qrcode/vendor/chillerlan/php-qrcode/tests/Output/QRImagickTest.php
+
+		-
+			message: '#^Call to an undefined static method chillerlan\\QRCodeTest\\Output\\QRImagickTest\:\:assertInstanceOf\(\)\.$#'
+			identifier: staticMethod.notFound
+			count: 1
+			path: inc/qrcode/vendor/chillerlan/php-qrcode/tests/Output/QRImagickTest.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\Output\\QRMarkupTest\:\:assertSame\(\)\.$#'
+			identifier: method.notFound
+			count: 2
+			path: inc/qrcode/vendor/chillerlan/php-qrcode/tests/Output/QRMarkupTest.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\Output\\QRMarkupTest\:\:assertStringContainsString\(\)\.$#'
+			identifier: method.notFound
+			count: 2
+			path: inc/qrcode/vendor/chillerlan/php-qrcode/tests/Output/QRMarkupTest.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\Output\\QROutputTestAbstract\:\:assertInstanceOf\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: inc/qrcode/vendor/chillerlan/php-qrcode/tests/Output/QROutputTestAbstract.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\Output\\QROutputTestAbstract\:\:expectException\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: inc/qrcode/vendor/chillerlan/php-qrcode/tests/Output/QROutputTestAbstract.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\Output\\QROutputTestAbstract\:\:expectExceptionMessage\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: inc/qrcode/vendor/chillerlan/php-qrcode/tests/Output/QROutputTestAbstract.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\Output\\QRStringTest\:\:assertSame\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: inc/qrcode/vendor/chillerlan/php-qrcode/tests/Output/QRStringTest.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\Output\\QRStringTest\:\:assertStringContainsString\(\)\.$#'
+			identifier: method.notFound
+			count: 2
+			path: inc/qrcode/vendor/chillerlan/php-qrcode/tests/Output/QRStringTest.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\QRCodeTest\:\:assertFalse\(\)\.$#'
+			identifier: method.notFound
+			count: 3
+			path: inc/qrcode/vendor/chillerlan/php-qrcode/tests/QRCodeTest.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\QRCodeTest\:\:assertInstanceOf\(\)\.$#'
+			identifier: method.notFound
+			count: 6
+			path: inc/qrcode/vendor/chillerlan/php-qrcode/tests/QRCodeTest.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\QRCodeTest\:\:assertNotEquals\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: inc/qrcode/vendor/chillerlan/php-qrcode/tests/QRCodeTest.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\QRCodeTest\:\:assertSame\(\)\.$#'
+			identifier: method.notFound
+			count: 2
+			path: inc/qrcode/vendor/chillerlan/php-qrcode/tests/QRCodeTest.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\QRCodeTest\:\:assertStringContainsString\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: inc/qrcode/vendor/chillerlan/php-qrcode/tests/QRCodeTest.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\QRCodeTest\:\:assertTrue\(\)\.$#'
+			identifier: method.notFound
+			count: 3
+			path: inc/qrcode/vendor/chillerlan/php-qrcode/tests/QRCodeTest.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\QRCodeTest\:\:expectException\(\)\.$#'
+			identifier: method.notFound
+			count: 3
+			path: inc/qrcode/vendor/chillerlan/php-qrcode/tests/QRCodeTest.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\QRCodeTest\:\:expectExceptionMessage\(\)\.$#'
+			identifier: method.notFound
+			count: 3
+			path: inc/qrcode/vendor/chillerlan/php-qrcode/tests/QRCodeTest.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\QROptionsTest\:\:assertSame\(\)\.$#'
+			identifier: method.notFound
+			count: 18
+			path: inc/qrcode/vendor/chillerlan/php-qrcode/tests/QROptionsTest.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\QROptionsTest\:\:expectException\(\)\.$#'
+			identifier: method.notFound
+			count: 2
+			path: inc/qrcode/vendor/chillerlan/php-qrcode/tests/QROptionsTest.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\QRCodeTest\\QROptionsTest\:\:expectExceptionMessage\(\)\.$#'
+			identifier: method.notFound
+			count: 2
+			path: inc/qrcode/vendor/chillerlan/php-qrcode/tests/QROptionsTest.php
+
+		-
+			message: '#^Deprecated in PHP 8\.4\: Parameter \#1 \$jsonOptions \(int\) is implicitly nullable via default value null\.$#'
+			identifier: parameter.implicitlyNullable
+			count: 1
+			path: inc/qrcode/vendor/chillerlan/php-settings-container/src/SettingsContainerAbstract.php
+
+		-
+			message: '#^Deprecated in PHP 8\.4\: Parameter \#1 \$properties \(iterable\) is implicitly nullable via default value null\.$#'
+			identifier: parameter.implicitlyNullable
+			count: 1
+			path: inc/qrcode/vendor/chillerlan/php-settings-container/src/SettingsContainerAbstract.php
+
+		-
+			message: '#^Deprecated in PHP 8\.4\: Parameter \#1 \$jsonOptions \(int\) is implicitly nullable via default value null\.$#'
+			identifier: parameter.implicitlyNullable
+			count: 1
+			path: inc/qrcode/vendor/chillerlan/php-settings-container/src/SettingsContainerInterface.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\SettingsTest\\ContainerTraitTest\:\:assertFalse\(\)\.$#'
+			identifier: method.notFound
+			count: 6
+			path: inc/qrcode/vendor/chillerlan/php-settings-container/tests/ContainerTest.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\SettingsTest\\ContainerTraitTest\:\:assertNull\(\)\.$#'
+			identifier: method.notFound
+			count: 6
+			path: inc/qrcode/vendor/chillerlan/php-settings-container/tests/ContainerTest.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\SettingsTest\\ContainerTraitTest\:\:assertSame\(\)\.$#'
+			identifier: method.notFound
+			count: 13
+			path: inc/qrcode/vendor/chillerlan/php-settings-container/tests/ContainerTest.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\SettingsTest\\ContainerTraitTest\:\:assertTrue\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: inc/qrcode/vendor/chillerlan/php-settings-container/tests/ContainerTest.php
+
+		-
+			message: '#^Call to an undefined method chillerlan\\SettingsTest\\ContainerTraitTest\:\:expectException\(\)\.$#'
+			identifier: method.notFound
+			count: 2
+			path: inc/qrcode/vendor/chillerlan/php-settings-container/tests/ContainerTest.php
+
+		-
+			message: '#^Parameter \$parser of method Composer\\InstalledVersions\:\:satisfies\(\) has invalid type Composer\\Semver\\VersionParser\.$#'
+			identifier: class.notFound
+			count: 1
+			path: inc/qrcode/vendor/composer/InstalledVersions.php
